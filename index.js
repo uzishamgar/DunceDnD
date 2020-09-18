@@ -2,7 +2,7 @@
 const fs = require('fs');
 const { prefix, token } = require('./config.json');
 const Discord = require('discord.js');
-
+// test
 // create a new Discord client
 const client = new Discord.Client();
 // create a new discord collection for commands
