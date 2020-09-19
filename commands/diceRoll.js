@@ -12,37 +12,80 @@ module.exports = {
 	name: 'roll',
 	description: 'Rolls any given dice',
 	execute(message, args) {
-		const argument = args[0];
+		const die = args[0];
+		const number = args[1] || 1;
+		let i = 0;
+		let rollString = '';
 		// return message if no arguments are provided
 		if(!args.length) {
 			return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
 		}
 		// Roll D4 Die
-		else if (argument === 'd4') {
-			return message.channel.send(`${message.author} rolled: ` + getRandomNumber(1, 4));
+		else if (die === 'd4') {
+			for (i = 0; i < number; i++) {
+				if(i === number - 1) {
+					rollString = rollString + getRandomNumber(1, 4);
+				}
+				else {
+					rollString = rollString + getRandomNumber(1, 4) + ', ';
+				}
+			}
+			message.channel.send(`${message.author} rolled: ` + rollString);
 		}
 		// Roll D6 Die
-		else if (argument === 'd6') {
-			message.channel.send(`${message.author} rolled: ` + getRandomNumber(1, 6));
+		else if (die === 'd6') {
+			for (i = 0; i < number; i++) {
+				if(i === number - 1) {
+					rollString = rollString + getRandomNumber(1, 6);
+				}
+				else {
+					rollString = rollString + getRandomNumber(1, 6) + ', ';
+				}
+			}
+			message.channel.send(`${message.author} rolled: ` + rollString);
 		}
 		// Roll D8 Die
-		else if (argument === 'd8 ') {
-			message.channel.send(`${message.author} rolled: ` + getRandomNumber(1, 8));
+		else if (die === 'd8 ') {
+			for (i = 0; i < number; i++) {
+				if(i === number - 1) {
+					rollString = rollString + getRandomNumber(1, 8);
+				}
+				else {
+					rollString = rollString + getRandomNumber(1, 8) + ', ';
+				}
+			}
+			message.channel.send(`${message.author} rolled: ` + rollString);
 		}
 		// Roll D12 Die
-		else if (argument === 'd12') {
-			message.channel.send(`${message.author} rolled: ` + getRandomNumber(1, 12));
+		else if (die === 'd12') {
+			for (i = 0; i < number; i++) {
+				if(i === number - 1) {
+					rollString = rollString + getRandomNumber(1, 12);
+				}
+				else {
+					rollString = rollString + getRandomNumber(1, 12) + ', ';
+				}
+			}
+			message.channel.send(`${message.author} rolled: ` + rollString);
 		}
 		// Roll D20 Die
-		else if (argument === 'd20') {
-			message.channel.send(`${message.author} rolled: ` + getRandomNumber(1, 20));
+		else if (die === 'd20') {
+			for (i = 0; i < number; i++) {
+				if(i === number - 1) {
+					rollString = rollString + getRandomNumber(1, 20);
+				}
+				else {
+					rollString = rollString + getRandomNumber(1, 20) + ', ';
+				}
+			}
+			message.channel.send(`${message.author} rolled: ` + rollString);
 		}
 		// Roll Percent Die
-		else if (argument === 'percent') {
+		else if (die === 'percent') {
 			message.channel.send(`${message.author} rolled: ` + getRandomNumber(0, 99));
 		}
 		// return message explaining different arguments
-		else if (argument === 'help') {
+		else if (die === 'help') {
 			message.channel.send('The commands for roll are: d4, d6, d8, d12, d20, percent.');
 		}
 	},
