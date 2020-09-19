@@ -20,7 +20,7 @@ module.exports = {
 		if(!args.length) {
 			return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
 		}
-		// Roll D4 Die
+		// Roll D4 Die the given number of times
 		else if (die === 'd4') {
 			for (i = 0; i < number; i++) {
 				if(i === number - 1) {
@@ -32,7 +32,7 @@ module.exports = {
 			}
 			message.channel.send(`${message.author} rolled: ` + rollString);
 		}
-		// Roll D6 Die
+		// Roll D6 Die the given number of times
 		else if (die === 'd6') {
 			for (i = 0; i < number; i++) {
 				if(i === number - 1) {
@@ -44,7 +44,7 @@ module.exports = {
 			}
 			message.channel.send(`${message.author} rolled: ` + rollString);
 		}
-		// Roll D8 Die
+		// Roll D8 Die the given number of times
 		else if (die === 'd8 ') {
 			for (i = 0; i < number; i++) {
 				if(i === number - 1) {
@@ -56,7 +56,7 @@ module.exports = {
 			}
 			message.channel.send(`${message.author} rolled: ` + rollString);
 		}
-		// Roll D12 Die
+		// Roll D12 Die the given number of times
 		else if (die === 'd12') {
 			for (i = 0; i < number; i++) {
 				if(i === number - 1) {
@@ -68,7 +68,7 @@ module.exports = {
 			}
 			message.channel.send(`${message.author} rolled: ` + rollString);
 		}
-		// Roll D20 Die
+		// Roll D20 Die the given number of times
 		else if (die === 'd20') {
 			for (i = 0; i < number; i++) {
 				if(i === number - 1) {
@@ -80,7 +80,7 @@ module.exports = {
 			}
 			message.channel.send(`${message.author} rolled: ` + rollString);
 		}
-		// Roll Percent Die
+		// Roll Percent Die once
 		else if (die === 'percent') {
 			message.channel.send(`${message.author} rolled: ` + getRandomNumber(0, 99));
 		}
