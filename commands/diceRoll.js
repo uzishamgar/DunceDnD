@@ -10,7 +10,7 @@ function getRandomNumber(minimum, maximum) {
 // export the commands to be accessible by other files
 module.exports = {
 	name: 'roll',
-	description: 'Rolls any given dice',
+	description: 'Rolls any given dice a set number of times',
 	execute(message, args) {
 		const die = args[0];
 		const number = args[1] || 1;
@@ -83,10 +83,6 @@ module.exports = {
 		// Roll Percent Die once
 		else if (die === 'percent') {
 			message.channel.send(`${message.author} rolled: ` + getRandomNumber(0, 99));
-		}
-		// return message explaining different arguments
-		else if (die === 'help') {
-			message.channel.send('The commands for roll are: d4, d6, d8, d12, d20, percent.');
 		}
 	},
 };

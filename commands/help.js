@@ -16,7 +16,17 @@ const embed = new Discord.MessageEmbed()
 module.exports = {
 	name: 'help',
 	description: 'provides a list of commands, how to use them and what they do',
-	execute(message) {
-		message.author.send(embed);
+	execute(message, args) {
+		const command = args[0];
+		if(!args.length) {
+			message.author.send(embed);
+		}
+		// return message explaining different arguments
+		else if (command === 'roll') {
+			message.channel.send('The commands for roll are: d4, d6, d8, d12, d20, percent.');
+		}
+		else if (command === 'coinflip') {
+			message.channel.send('coinflip flips a coin and returns heads or tails');
+		}
 	},
 };

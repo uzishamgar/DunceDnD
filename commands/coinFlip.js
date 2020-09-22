@@ -10,22 +10,15 @@ function getRandomNumber(minimum, maximum) {
 module.exports = {
 	name: 'coinflip',
 	description: 'flips a coin',
-	execute(message, args) {
-		const argument = args[0];
+	execute(message) {
 		// flip a coin
 		const flip = getRandomNumber(0, 1);
 		// if no arguments flip coin
-		if(!args.length) {
-			// return heads for 1 and tails for 0
-			if (flip === 1) {
-				message.channel.send(`${message.author}'s coin was HEADS!`);
-			}
-			else {
-				message.channel.send(`${message.author}'s coin was TAILS!`);
-			}
+		if (flip === 1) {
+			message.channel.send(`${message.author}'s coin was HEADS!`);
 		}
-		else if (argument === 'help') {
-			message.channel.send('coinflip flips a coin and returns heads or tails');
+		else {
+			message.channel.send(`${message.author}'s coin was TAILS!`);
 		}
 	},
 };
