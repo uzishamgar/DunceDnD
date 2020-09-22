@@ -4,7 +4,7 @@
   "RollCommandTitle": "!roll <chosen die> [number of rolls]",
   "RollCommandValue": "Valid Arguments: d4, d6, d8, d12, d20, percent\nExample: !roll d4 3\noutput: @User rolled: 2, 1, 4",
   "CoinFlipCommandTitle": "!coinflip",
-  "CoinFlipCommandValue": "Example: !coinlfip\nOutput: @User's coin was HEADS",
+  "CoinFlipCommandValue": "Example: !coinflip\nOutput: @User's coin was HEADS",
   "ExampleCommandTitle": "Example text",
   "ExampleCommandValue": "Example text\nExample text"
 

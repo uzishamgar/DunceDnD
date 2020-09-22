@@ -1,6 +1,6 @@
 // help.js
 const Discord = require('discord.js');
-const helpDoc = require('./commands_new.json');
+const helpDoc = require('./commands.json');
 
 // const commandsList = (fs.readFileSync('./commands/commands.txt', 'utf8'));
 
@@ -23,10 +23,10 @@ module.exports = {
 		}
 		// return message explaining different arguments
 		else if (command === 'roll') {
-			message.channel.send('The commands for roll are: d4, d6, d8, d12, d20, percent.');
+			message.channel.send('!roll <chosen die> [number of rolls]\nValid Arguments: d4, d6, d8, d12, d20, percent\nExample: !roll d4 3\noutput: @User rolled: 2, 1, 4"');
 		}
 		else if (command === 'coinflip') {
-			message.channel.send('coinflip flips a coin and returns heads or tails');
+			message.channel.send('!coinflip\nExample: !coinflip\nOutput: @User\'s coin was HEADS');
 		}
 	},
 };
